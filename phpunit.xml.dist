@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        backupGlobals="false"
+        backupStaticAttributes="false"
+        colors="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        processIsolation="false"
+        stopOnFailure="false"
+        bootstrap="vendor/autoload.php">
+
+    <testsuites>
+        <testsuite name="all">
+            <directory>tests/</directory>
+        </testsuite>
+
+    </testsuites>
+
+    <php>
+        <ini name="display_errors" value="On" />
+        <!-- E_ALL -->
+        <ini name="error_reporting" value="32767" />
+    </php>
+</phpunit>

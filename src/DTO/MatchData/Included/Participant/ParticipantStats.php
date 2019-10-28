@@ -15,110 +15,116 @@ class ParticipantStats
      * @var int|null
      */
     public $DBNOs;
+
     /**
      * @var int|null
      */
     public $assists;
+
     /**
      * @var int|null
      */
     public $boosts;
+
     /**
      * @var int|null
      */
     public $damageDealt;
+
     /**
      * @var null|string
      */
     public $deathType;
+
     /**
      * @var int|null
      */
     public $headshotKills;
+
     /**
      * @var int|null
      */
     public $heals;
+
     /**
      * @var int|null
      */
     public $killPlace;
+
     /**
      * @var int|null
      */
     public $killStreaks;
+
     /**
      * @var int|null
      */
     public $kills;
-    /**
-     * @var int|null
-     */
-    public $lastKillPoints;
-    /**
-     * @var int|null
-     */
-    public $lastWinPoints;
+
     /**
      * @var int|null
      */
     public $longestKill;
-    /**
-     * @var int|null
-     */
-    public $mostDamage;
+
     /**
      * @var null|string
      */
     public $name;
+
     /**
      * @var null|string
      */
     public $playerId;
+
     /**
      * @var int|null
      */
     public $revives;
+
     /**
      * @var int|null
      */
     public $rideDistance;
+
     /**
      * @var int|null
      */
     public $roadKills;
+
     /**
      * @var float|null
      */
     public $swimDistance;
+
     /**
      * @var int|null
      */
     public $teamKills;
+
     /**
      * @var int|null
      */
     public $timeSurvived;
+
     /**
      * @var int|null
      */
     public $vehicleDestroys;
+
     /**
      * @var float|null
      */
     public $walkDistance;
+
     /**
      * @var int|null
      */
     public $weaponsAcquired;
+
     /**
      * @var int|null
      */
     public $winPlace;
-    /**
-     * @var int|null
-     */
-    public $rankPoints;
 
     /**
      * ParticipantStats constructor.
@@ -133,10 +139,7 @@ class ParticipantStats
      * @param int|null    $killPlace
      * @param int|null    $killStreaks
      * @param int|null    $kills
-     * @param int|null    $lastKillPoints
-     * @param int|null    $lastWinPoints
      * @param float|null  $longestKill
-     * @param int|null    $mostDamage
      * @param null|string $name
      * @param null|string $playerId
      * @param int|null    $revives
@@ -149,7 +152,6 @@ class ParticipantStats
      * @param float|null  $walkDistance
      * @param int|null    $weaponsAcquired
      * @param int|null    $winPlace
-     * @param int|null    $rankPoints
      */
     public function __construct(
         ?int $DBNOs,
@@ -162,10 +164,7 @@ class ParticipantStats
         ?int $killPlace,
         ?int $killStreaks,
         ?int $kills,
-        ?int $lastKillPoints,
-        ?int $lastWinPoints,
         ?float $longestKill,
-        ?int $mostDamage,
         ?string $name,
         ?string $playerId,
         ?int $revives,
@@ -177,8 +176,7 @@ class ParticipantStats
         ?int $vehicleDestroys,
         ?float $walkDistance,
         ?int $weaponsAcquired,
-        ?int $winPlace,
-        ?int $rankPoints
+        ?int $winPlace
     ) {
         $this->DBNOs           = $DBNOs;
         $this->assists         = $assists;
@@ -190,10 +188,7 @@ class ParticipantStats
         $this->killPlace       = $killPlace;
         $this->killStreaks     = $killStreaks;
         $this->kills           = $kills;
-        $this->lastKillPoints  = $lastKillPoints;
-        $this->lastWinPoints   = $lastWinPoints;
         $this->longestKill     = $longestKill;
-        $this->mostDamage      = $mostDamage;
         $this->name            = $name;
         $this->playerId        = $playerId;
         $this->revives         = $revives;
@@ -206,7 +201,6 @@ class ParticipantStats
         $this->walkDistance    = $walkDistance;
         $this->weaponsAcquired = $weaponsAcquired;
         $this->winPlace        = $winPlace;
-        $this->rankPoints      = $rankPoints;
     }
 
     /**
@@ -227,10 +221,7 @@ class ParticipantStats
             $data['killPlace'],
             $data['killStreaks'],
             $data['kills'],
-            $data['lastKillPoints'],
-            $data['lastWinPoints'],
             $data['longestKill'],
-            $data['mostDamage'],
             $data['name'],
             $data['playerId'],
             $data['revives'],
@@ -242,8 +233,7 @@ class ParticipantStats
             $data['vehicleDestroys'],
             $data['walkDistance'],
             $data['weaponsAcquired'],
-            $data['winPlace'],
-            $data['rankPoints']
+            $data['winPlace']
         );
     }
 }
